@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="this.notes.length > 0">
+    <div *ngFor="let note of this.notes" class="note">
+      <div class="note-id">Note {{note.id}}</div>
+      <div class="note-content">{{note.content}}</div>
+      <div class="note-date">{{note.timestamp | date}}</div>
+    </div>
+  </div>
+
+  <div *ngIf="this.isLoading" class="loader"></div>
+
+  <div *ngIf="!this.isLoading">
+    <button (click)="this.loadMore()" class="load-button">Load more</button>
+  </div>
+</div>

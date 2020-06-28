@@ -1,3 +1,5 @@
+<p>infinite-scroll-notes works!</p>
+
 <div class="container">
   <!-- Notes -->
   <div *ngIf="this.notes.length > 0">
@@ -5,9 +7,4 @@
   </div>
 
   <app-loader [isVisible]="this.isLoading"></app-loader>
-
-  <div *ngIf="!this.isLoading">
-    <!-- Load more button -->
-    <app-button value="Load more" (onClick)="this.loadMore()"></app-button>
-  </div>
 </div>

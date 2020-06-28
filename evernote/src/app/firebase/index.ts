@@ -30,7 +30,7 @@ export class Note {
 // };
 
 
-const lorem = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nam blanditiis nesciunt iure quam. Ipsa voluptatum iste voluptates nihil dicta commodi, blanditiis hic. Dicta, architecto minus. Magnam optio culpa cumque!';
+const lorem = 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.';
 const timeout = 2000;
 
 export const retrieveNotes = (from = 0, size = 5) => {

@@ -1,18 +1,21 @@
 <div class="container">
   <h1>My notebook</h1>
 
-  <label class="display-option">
-    Classic
-    <input type="radio" name="scroll" [checked]="this.displayType === this.classicDisplay" [value]="this.classicDisplay"
-      (change)="this.changeDisplay($event.target.value)" />
-  </label>
+  <div class="choose-option">
+    <label class="display-option">
+      <input type="radio" name="scroll" [checked]="this.displayType === this.classicDisplay"
+      [value]="this.classicDisplay" (change)="this.changeDisplay($event.target.value)" />
+      Classic
+    </label>
 
-  <label class="display-option">
-    Infinite
-    <input type="radio" name="scroll" [checked]="this.displayType === this.infiniteDisplay"
+    <label class="display-option">
+      <input type="radio" name="scroll" [checked]="this.displayType === this.infiniteDisplay"
       [value]="this.infiniteDisplay" (change)="this.changeDisplay($event.target.value)" />
-  </label>
+      Infinite
+    </label>
+  </div>
 
   <h3>Notes:</h3>
-  <app-my-notes></app-my-notes>
+  <!-- Render notes  -->
+  <app-my-notes *ngIf="this.displayType === this.classicDisplay"></app-my-notes>
 </div>

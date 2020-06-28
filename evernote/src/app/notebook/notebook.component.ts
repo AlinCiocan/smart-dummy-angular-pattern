@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notebook.component.css']
 })
 export class NotebookComponent implements OnInit {
+  readonly classicDisplay = 'classic';
+  readonly infiniteDisplay = 'infinite';
+
+  displayType = this.classicDisplay;
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  changeDisplay(newDisplay) {
+    this.displayType = newDisplay;
+    console.log(this.displayType);
   }
 
 }

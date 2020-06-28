@@ -1,6 +1,18 @@
 <div class="container">
   <h1>My notebook</h1>
 
+  <label class="display-option">
+    Classic
+    <input type="radio" name="scroll" [checked]="this.displayType === this.classicDisplay" [value]="this.classicDisplay"
+      (change)="this.changeDisplay($event.target.value)" />
+  </label>
+
+  <label class="display-option">
+    Infinite
+    <input type="radio" name="scroll" [checked]="this.displayType === this.infiniteDisplay"
+      [value]="this.infiniteDisplay" (change)="this.changeDisplay($event.target.value)" />
+  </label>
+
   <h3>Notes:</h3>
   <app-my-notes></app-my-notes>
 </div>
